@@ -1,29 +1,44 @@
-//
-//  FormViewController.swift
-//  CalculatorIMC
-//
-//  Created by David Robert on 21/05/24.
-//
-
 import UIKit
 
 class FormViewController: UIViewController {
 
+    @IBOutlet weak var displayTextLabel: UILabel!
+    @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var weightTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func resultPressedButton(_ sender: UIButton) {
+        // Validar e obter os valores de altura e peso
+        guard let heightText = heightTextField.text, !heightText.isEmpty,
+              let height = Double(heightText),
+              let weightText = weightTextField.text, !weightText.isEmpty,
+              let weight = Double(weightText) else {
+            displayTextLabel.text = "Digite uma informação válida."
+            displayTextLabel.textColor = .red
+            return
+        }
+        
+        // Verificar se os valores são válidos (> 0)
+        guard height > 0, weight > 0 else {
+            displayTextLabel.text = "Digite uma informação válida."
+            displayTextLabel.textColor = .red
+            return
+        }
+        
+        // Criar uma instância da ResultViewController
+        guard let vc = storyboard?.instantiateViewController(identifier: "result_vc") as? ResultViewController else {
+            return
+        }
+        
+        // Passar os dados para a ResultViewController
+        vc.height = height
+        vc.weight = weight
+        
+        // Apresentar a ResultViewController
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
-    */
-
 }
