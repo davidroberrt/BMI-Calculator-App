@@ -13,3 +13,4 @@ struct BMICategory{
     let color: UIColor
     let description: String
 }
+
