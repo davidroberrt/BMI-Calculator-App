@@ -1,14 +1,12 @@
-//
-//  WeightCategoryViewModel.swift
-//  CalculatorIMC
-//
-//  Created by David Robert on 26/07/24.
-//
-
 import Foundation
 import UIKit
 
 class WeightCategoryViewModel {
+    weak var viewController: WeightCategoryViewController?
+    
+    init(viewController: WeightCategoryViewController) {
+        self.viewController = viewController
+    }
     
     private let underWeightDescription = """
     Com base no seu Índice de Massa Corporal (IMC), parece que você está abaixo do peso ideal para sua altura.
@@ -23,17 +21,16 @@ class WeightCategoryViewModel {
     Lembre-se de que manter um peso saudável não é apenas sobre estética, mas também sobre prevenir doenças e promover o bem-estar geral. Continue assim e aproveite os benefícios de um estilo de vida saudável!
     """
     private let overWeightDescription = """
-    De acordo com seu Índice de Massa Corporal (IMC), você está acima do peso ideal para sua altura. 
+    De acordo com seu Índice de Massa Corporal (IMC), você está acima do peso ideal para sua altura.
     Isso pode aumentar o risco de desenvolver várias condições de saúde, como diabetes tipo 2, doenças cardíacas e pressão alta.
     É importante abordar isso com cuidado. Considere fazer mudanças em sua dieta e estilo de vida, como comer mais alimentos saudáveis, controlar as porções e praticar exercícios regularmente.
     Consultar um profissional de saúde pode ajudá-lo a desenvolver um plano personalizado para alcançar e manter um peso saudável.
     """
     private let obesityDescription = """
-    Com base no seu Índice de Massa Corporal (IMC), você está em um estado de obesidade. 
+    Com base no seu Índice de Massa Corporal (IMC), você está em um estado de obesidade.
     Isso pode aumentar significativamente o risco de várias condições de saúde, incluindo doenças cardíacas, diabetes tipo 2, apneia do sono e certos tipos de câncer.
     É essencial abordar isso com urgência. Recomendamos que você consulte um profissional de saúde para avaliação e orientação. Mudanças na dieta, aumento da atividade física e outras intervenções podem ajudar a melhorar sua saúde geral."
     """
-    
     
     func getWeightCategory(for bmiModel: BMIModel) -> BMICategory {
         let bmi = bmiModel.bmi
@@ -50,4 +47,3 @@ class WeightCategoryViewModel {
         }
     }
 }
-

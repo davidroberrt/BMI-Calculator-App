@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  CalculatorIMC
+//  CalculatorBMI
 //
-//  Created by David Robert on 09/05/24.
+//  Created by David Robert on 30/07/24.
 //
 
 import UIKit

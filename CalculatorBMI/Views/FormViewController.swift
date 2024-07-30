@@ -10,8 +10,14 @@ class FormViewController: UIViewController {
     }
     @IBAction func resultPressedButton(_ sender: UIButton) {
         
+        // Criar uma instância do FormViewModel e passar a referência do FormViewController
+        let viewModel = FormViewModel(viewController: self)
         
-        // Criar uma instância da ResultViewController
+        // Obter os valores verificados e criar o modelo de IMC
+        guard let bmiModel = viewModel.getAndVerifyValues() else {
+            // Lidar com erro, exibir mensagem, etc.
+            return
+        }        // Criar uma instância da ResultViewController
         guard let vc = storyboard?.instantiateViewController(identifier: "result_vc") as? WeightCategoryViewController else {
             return
         }

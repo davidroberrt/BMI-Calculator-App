@@ -7,7 +7,10 @@ class FormViewModel {
     init(viewController: FormViewController) {
         self.viewController = viewController
     }
-    
+    func showError() {
+        viewController?.displayTextLabel.text = "Digite uma informação válida."
+        viewController?.displayTextLabel.textColor = .red
+    }
     func getAndVerifyValues() -> BMIModel? {
         // Validar e obter os valores de altura e peso
         guard let heightText = viewController?.heightTextField.text, !heightText.isEmpty,
@@ -28,8 +31,5 @@ class FormViewModel {
         return BMIModel(height: height, weight: weight)
     }
     
-    func showError() {
-        viewController?.displayTextLabel.text = "Digite uma informação válida."
-        viewController?.displayTextLabel.textColor = .red
-    }
+
 }
