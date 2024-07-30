@@ -9,8 +9,6 @@ import Foundation
 import UIKit
 
 class WeightCategoryViewModel {
-    var currentCategory: BMICategory?
-    var imc: Double = 22.0
     
     private let underWeightDescription = """
     Com base no seu Índice de Massa Corporal (IMC), parece que você está abaixo do peso ideal para sua altura.
@@ -36,7 +34,10 @@ class WeightCategoryViewModel {
     É essencial abordar isso com urgência. Recomendamos que você consulte um profissional de saúde para avaliação e orientação. Mudanças na dieta, aumento da atividade física e outras intervenções podem ajudar a melhorar sua saúde geral."
     """
     
-    func getWeightCategory(for bmi: Double) -> BMICategory {
+    
+    func getWeightCategory(for bmiModel: BMIModel) -> BMICategory {
+        let bmi = bmiModel.bmi
+        
         switch bmi {
         case ..<18.5:
             return BMICategory(name: "Abaixo do peso", color: .yellow, description: underWeightDescription)

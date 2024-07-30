@@ -146,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="2239" y="11"/>
         </scene>
-        <!--Result View Controller-->
+        <!--Weight Category View Controller-->
         <scene sceneID="6rL-rU-ngp">
             <objects>
-                <viewController storyboardIdentifier="result_vc" id="Nz1-zc-aCF" customClass="ResultViewController" customModule="CalculatorIMC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="result_vc" id="Nz1-zc-aCF" customClass="WeightCategoryViewController" customModule="CalculatorIMC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uuj-Yb-yBB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
