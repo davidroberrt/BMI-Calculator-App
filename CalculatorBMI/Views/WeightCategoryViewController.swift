@@ -10,27 +10,27 @@ class WeightCategoryViewController: UIViewController {
     @IBOutlet weak var bmiTextLabel: UILabel!
     @IBOutlet weak var ResultCategoryTextView: UITextView!
     
-    private var viewModel: WeightCategoryViewModel!
-    var bmiModel: BMIModel?
+    var height: Double = 0.0
+    var weight: Double = 0.0
+    var bmi: Double = 0.0
+    
+    let viewModel = Model()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = WeightCategoryViewModel(viewController: self)
-        if let bmiModel = bmiModel {
-            updateInterfaceWeightCategoryView(for: bmiModel)
-        }
+        updateInterfaceWeightCategoryView()
     }
     
-    func updateInterfaceWeightCategoryView(for bmiModel: BMIModel) {
-        let WeightCategory = viewModel.getWeightCategory(for: bmiModel)
+    func updateInterfaceWeightCategoryView() {
+        let weightCategory = viewModel.getWeightCategory(for: bmi)
         
-        ringColorStatusBadge.backgroundColor = WeightCategory.color
-        categoryTextCenterLabel.text = WeightCategory.name
-        ResultCategoryTextView.text = WeightCategory.description
+        ringColorStatusBadge.tintColor = weightCategory.color
+        categoryTextCenterLabel.text = weightCategory.name
+        ResultCategoryTextView.text = weightCategory.description
         
-        bmiTextCenterLabel.text = String(format: "%.1f", bmiModel.bmi)
-        weightTextLabel.text = "Peso: \(bmiModel.weight)"
-        heightTextLabel.text = "Altura: \(bmiModel.height)"
-        bmiTextLabel.text = String(format: "IMC: %.1f", bmiModel.bmi)
+        bmiTextCenterLabel.text = String(format: "%.1f", bmi)
+        weightTextLabel.text = "Peso: \(weight) kg"
+        heightTextLabel.text = "Altura: \(height) m"
+        bmiTextLabel.text = String(format: "IMC: %.1f", bmi)
     }
 }
