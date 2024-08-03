@@ -15,7 +15,7 @@
 		A02254F92C58F0CE00A78B01 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A02254F82C58F0CE00A78B01 /* Base */; };
 		A02255062C58F40F00A78B01 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02255052C58F40F00A78B01 /* FormViewController.swift */; };
 		A02255082C58F46200A78B01 /* WeightCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02255072C58F46200A78B01 /* WeightCategoryViewController.swift */; };
-		A022550A2C58F47900A78B01 /* BMIModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02255092C58F47900A78B01 /* BMIModel.swift */; };
+		A022550A2C58F47900A78B01 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02255092C58F47900A78B01 /* Model.swift */; };
 		A022550E2C58F4B900A78B01 /* FormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A022550D2C58F4B900A78B01 /* FormViewModel.swift */; };
 		A02255102C58F4D900A78B01 /* WeightCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A022550F2C58F4D900A78B01 /* WeightCategoryViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +31,7 @@
 		A02254FA2C58F0CE00A78B01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A02255052C58F40F00A78B01 /* FormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		A02255072C58F46200A78B01 /* WeightCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCategoryViewController.swift; sourceTree = "<group>"; };
-		A02255092C58F47900A78B01 /* BMIModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMIModel.swift; sourceTree = "<group>"; };
+		A02255092C58F47900A78B01 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A022550D2C58F4B900A78B01 /* FormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormViewModel.swift; sourceTree = "<group>"; };
 		A022550F2C58F4D900A78B01 /* WeightCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightCategoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,7 +80,7 @@
 		A02255012C58F3B500A78B01 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A02255092C58F47900A78B01 /* BMIModel.swift */,
+				A02255092C58F47900A78B01 /* Model.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,7 +180,7 @@
 				A02254F12C58F0CD00A78B01 /* ViewController.swift in Sources */,
 				A02254ED2C58F0CD00A78B01 /* AppDelegate.swift in Sources */,
 				A02255102C58F4D900A78B01 /* WeightCategoryViewModel.swift in Sources */,
-				A022550A2C58F47900A78B01 /* BMIModel.swift in Sources */,
+				A022550A2C58F47900A78B01 /* Model.swift in Sources */,
 				A02255062C58F40F00A78B01 /* FormViewController.swift in Sources */,
 				A02255082C58F46200A78B01 /* WeightCategoryViewController.swift in Sources */,
 				A022550E2C58F4B900A78B01 /* FormViewModel.swift in Sources */,
