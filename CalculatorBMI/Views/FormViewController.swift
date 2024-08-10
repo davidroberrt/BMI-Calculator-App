@@ -8,6 +8,13 @@ class FormViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Configura o gesture recognizer para detectar toques na view
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    // Função para esconder o teclado
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     @IBAction func cancelButton(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "Homeview") as? ViewController else{
