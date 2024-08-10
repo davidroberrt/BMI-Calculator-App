@@ -9,7 +9,14 @@ class FormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    @IBAction func cancelButton(_ sender: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "Homeview") as? ViewController else{
+            return
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true) // Apresentando a primeira View
+    }
     @IBAction func resultPressedButton(_ sender: UIButton) {
         let model = Model()
         
@@ -33,7 +40,7 @@ class FormViewController: UIViewController {
         // Calcular o IMC
         let bmi = model.calculateBMI(height: height, weight: weight)
         
-        // Criar uma instância da WeightCategoryViewController
+        // Criar uma instância da WeightCategoryViewController para passar os dados
         guard let vc = storyboard?.instantiateViewController(identifier: "result_vc") as? WeightCategoryViewController else {
             return
         }
@@ -47,4 +54,5 @@ class FormViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
     }
+
 }

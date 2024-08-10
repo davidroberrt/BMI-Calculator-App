@@ -9,6 +9,7 @@ class WeightCategoryViewController: UIViewController {
     @IBOutlet weak var heightTextLabel: UILabel!
     @IBOutlet weak var bmiTextLabel: UILabel!
     @IBOutlet weak var ResultCategoryTextView: UITextView!
+    @IBOutlet weak var backButtonAction: UIButton!
     
     var height: Double = 0.0
     var weight: Double = 0.0
@@ -33,4 +34,14 @@ class WeightCategoryViewController: UIViewController {
         heightTextLabel.text = "Altura: \(height) m"
         bmiTextLabel.text = String(format: "IMC: %.1f", bmi)
     }
+    
+    @IBAction func backButtonAction(_ sender: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "Homeview") as? ViewController else{
+            return
+        }
+        
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true) // Apresentando a primeira View
+    }
 }
+

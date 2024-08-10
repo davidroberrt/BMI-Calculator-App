@@ -28,7 +28,7 @@ class FormViewModel {
         }
         
         // Criar e retornar a instância do BMIModel com valores válidos
-        var values = Model.BMIModel(height: height, weight: weight)
+        let values = Model.BMIModel(height: height, weight: weight)
         return values
     }
     
