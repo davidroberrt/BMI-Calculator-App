@@ -5,7 +5,7 @@
 ## Funcionalidades
 
 - **Cálculo Rápido e Preciso:** Insira seu peso e altura para calcular o IMC instantaneamente.
-- **Classificação IMC:** Receba uma classificação clara do seu IMC com base nas categorias padrão, como Magreza, Normal, Sobrepeso e Obesidade.
+- **Classificação IMC:** Receba uma classificação clara do seu IMC com base nas categorias padrão, como Abaixo do peso, Normal, Sobrepeso e Obesidade.
 - **Histórico de Cálculos:** Armazene e visualize seu histórico de cálculos para acompanhar sua evolução ao longo do tempo.
 - **Interface Amigável:** Design moderno e fácil de usar, baseado no UIKit.
 - **Suporte a Unidades Múltiplas:** Calcule o IMC usando diferentes unidades de medida, como quilogramas e libras, e metros e pés.
